@@ -1,12 +1,15 @@
 'use strict';
 
 
+
 juke.controller('AlbumCtrl', function ($scope, AlbumFactory, $rootScope, $log) {
   
 
   AlbumFactory.fetchAll()
-  .then(function(album){
-    $scope.album = album
+  .then(function(apple){
+    $scope.albums = apple
+    console.log(apple)
+   
   })
   // load our initial data
   // $log service can be turned on and off; also, pre-bound

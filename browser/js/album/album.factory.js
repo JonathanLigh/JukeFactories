@@ -3,8 +3,9 @@
 juke.factory('AlbumFactory', function($http, $log){
 	var obj = {};
 
+
   obj.fetchAll = function(){
-  	$http.get('/api/albums/')
+  	return $http.get('/api/albums/')
   	.then(function (res){ 
   		res.data.forEach(function(e){
   			e.imageUrl = '/api/albums/' + e.id + '/image';
@@ -13,6 +14,7 @@ juke.factory('AlbumFactory', function($http, $log){
   				song.albumIndex = i;
   			})
   		})
+
   		return res.data; 
   	})
   }
