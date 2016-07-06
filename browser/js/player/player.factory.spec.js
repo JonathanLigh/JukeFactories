@@ -98,7 +98,7 @@ describe('`PlayerFactory` factory', function () {
 
   });
 
-  xdescribe('#getCurrentSong', function () {
+  describe('#getCurrentSong', function () {
 
     it('defaults to null', function () {
       expect(PlayerFactory.getCurrentSong()).to.equal(null);
